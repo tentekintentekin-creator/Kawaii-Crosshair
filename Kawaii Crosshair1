@@ -1,0 +1,18 @@
+-- Create a ScreenGui to hold the UI
+local screenGui = Instance.new("ScreenGui")
+screenGui.Name = "CustomCrosshair"
+screenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+
+-- Create the main container (The Crosshair)
+local crosshair = Instance.new("Frame")
+crosshair.Name = "MainFrame"
+crosshair.Size = UDim2.new(0, 10, 0, 10) -- 10x10 pixels
+crosshair.Position = UDim2.new(0.5, -5, 0.5, -5) -- Perfectly centered
+crosshair.BackgroundColor3 = Color3.fromRGB(255, 105, 180) -- Hot Pink
+crosshair.BorderSizePixel = 0
+crosshair.Parent = screenGui
+
+-- Add a Corner to make it look like a heart or circle
+local uiCorner = Instance.new("UICorner")
+uiCorner.CornerRadius = UDim.new(1, 0) -- Makes it a circle
+uiCorner.Parent = crosshair
